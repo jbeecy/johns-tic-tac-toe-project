@@ -12,7 +12,30 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>John's Tic Tac Toe Game</h1>
+      <br>
+      <h3>Sign Up</h3>
+      <form id="sign-up" class="border">
+        <label>Email</label>
+        <input type="email" name="credentials[email]">
+        <label>Password</label>
+        <input type="password" name="credentials[password]">
+        <label>Password Confirmation</label>
+        <input type="password" name="credentials[password_confirmation]">
+        <input type="submit" value="Sign Up">
+      </form>
+      <br>
+
+      <h3>Sign In</h3>
+      <form id="sign-in" class="border">
+        <label>Email</label>
+        <input type="email" name="credentials[email]">
+        <label>Password</label>
+        <input type="password" name="credentials[password]">
+        <input type="submit" value="Sign In">
+      </form>
+      <button id="sign-out" type="button">Sign Out</button>
+      <p id="message"></p>
     </body>
 </html>
 <!-- Add forms for sign up, sign in, and button for sign out -->
