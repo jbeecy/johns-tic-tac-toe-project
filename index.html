@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>John's Tic Tac Toe Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -14,6 +14,7 @@
     <body>
       <h1>John's Tic Tac Toe Game</h1>
       <br>
+<!-- Add forms for sign up, sign in, and button for sign out -->
       <h3>Sign Up</h3>
       <form id="sign-up" class="border">
         <label>Email</label>
@@ -36,8 +37,25 @@
       </form>
       <br>
       <button id="sign-out" type="button">Sign Out</button>
+<!-- add messages for successful sign in and sign out and sign up -->
       <p id="message"></p>
+      <br>
+<!-- create a table for the game board, stash data values for table box index value -->
+      <div id="game-screen">
+        <h3 class="game-intro">Lets play some Tic Tac Toe</h3>
+        <p class="how-to">I assume you know how to play. Remember: 3 in a row!</p>
+        <table id="game-board">
+          <tr>
+            <td data-cell-index="0">1</td><td class="top" data-cell-index="1">2</td><td data-cell-index="2">3</td>
+          </tr>
+          <tr>
+            <td class="left" data-cell-index="3">4</td><td data-cell-index="4">5</td><td class="right" data-cell-index="5">6</td>
+          </tr>
+          <tr>
+            <td data-cell-index="6">7</td><td class="bottom" data-cell-index="7">8</td><td data-cell-index="8">9</td>
+          </tr>
+        </table>
+      </div>
     </body>
 </html>
-<!-- Add forms for sign up, sign in, and button for sign out -->
-<!-- add messages for successful sign in and sign out and sign up -->
+

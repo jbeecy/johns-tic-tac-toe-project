@@ -1,1 +1,54 @@
 @import '~bootstrap/scss/bootstrap';
+
+// need to add style to increase the size of the game board table, this is a UX need.
+// need to create visible boarders on the table between the <td> tags, also UX need
+
+td {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+
+table {
+  background-color: rgb(207, 207, 206);
+  margin: 0 auto;
+  border: 2.5px;
+  border-style: solid;
+  border-color: black;
+}
+
+.top {
+  border-left: 2.5px solid black;
+  border-right: 2.5px solid black;
+  border-bottom: 2.5px solid black;
+}
+
+.left {
+  border-top: 2.5px solid black;
+  border-bottom: 2.5px solid black;
+  border-right: 2.5px solid black;
+}
+
+.right {
+  border-top: 2.5px solid black;
+  border-bottom: 2.5px solid black;
+  border-left: 2.5px solid black;
+}
+
+.bottom {
+  border-left: 2.5px solid black;
+  border-right: 2.5px solid black;
+  border-top: 2.5px solid black;
+}
+
+h1 {
+  text-align: center;
+}
+
+.game-intro {
+  text-align: center;
+}
+
+.how-to {
+  text-align: center;
+}
