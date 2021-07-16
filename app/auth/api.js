@@ -1,5 +1,5 @@
 // require store.js for token auth on sign out
-// const store = require('./../store')
+const store = require('./../store')
 // This will be so that we can store tokens for users sign out
 
 // construct appropriate api calls for post, patch, get, delete
@@ -20,8 +20,20 @@ const signIn = function (data) {
   })
 }
 
+const signOut = function () {
+  console.log(store.userToken)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/sign-out',
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    }
+  })
+}
+
 // module export the correct functions
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  signOut
 }
