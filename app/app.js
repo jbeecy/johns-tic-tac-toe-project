@@ -7,3 +7,6 @@
 $(() => {
   // your JS code goes here
 })
+
+// create and require events.js
+// after writing forms on html create event listeners
