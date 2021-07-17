@@ -15,8 +15,8 @@
       <h1>John's Tic Tac Toe Game</h1>
       <br>
 <!-- Add forms for sign up, sign in, and button for sign out -->
-      <h3>Sign Up</h3>
       <form id="sign-up" class="border">
+        <h3>Sign Up</h3>
         <label>Email</label>
         <input type="email" name="credentials[email]">
         <label>Password</label>
@@ -27,8 +27,8 @@
       </form>
       <br>
 
-      <h3>Sign In</h3>
       <form id="sign-in" class="border">
+        <h3>Sign In</h3>
         <label>Email</label>
         <input type="email" name="credentials[email]">
         <label>Password</label>
@@ -42,20 +42,35 @@
       <br>
 <!-- create a table for the game board, stash data values for table box index value -->
       <div id="game-screen">
-        <h3 class="game-intro">Lets play some Tic Tac Toe</h3>
-        <p class="how-to">I assume you know how to play. Remember: 3 in a row!</p>
+        <!-- need to name each game board piece with IDs -->
+        <!-- after ^ need event listeners and link user input data to table values -->
+        <h3 class="game-intro">Let's play some Tic Tac Toe</h3>
+        <p class="how-to ">I assume you know how to play. Remember: 3 in a row!</p>
         <table id="game-board">
           <tr>
-            <td data-cell-index="0">1</td><td class="top" data-cell-index="1">2</td><td data-cell-index="2">3</td>
+            <td id="box-0" class="game-box" data-cell-index="0"></td><td id="box-1" class="game-box" data-cell-index="1"></td><td id="box-2" class="game-box" data-cell-index="2"></td>
           </tr>
           <tr>
-            <td class="left" data-cell-index="3">4</td><td data-cell-index="4">5</td><td class="right" data-cell-index="5">6</td>
+            <td id="box-3" class="game-box" data-cell-index="3"></td><td id="box-4" class="game-box" data-cell-index="4"></td><td id="box-5" class="game-box" data-cell-index="5"></td>
           </tr>
           <tr>
-            <td data-cell-index="6">7</td><td class="bottom" data-cell-index="7">8</td><td data-cell-index="8">9</td>
+            <td id="box-6" class="game-box" data-cell-index="6"></td><td id="box-7" class="game-box" data-cell-index="7"></td><td id="box-8" class="game-box" data-cell-index="8"></td>
           </tr>
         </table>
+        <div id="game-info">
+          <button id="new-game">New Game</button>
+          <table id="score-board">
+            <h4>Score</h4>
+            <tr>
+              <td class="sc-cell">X's</td><td class="sc-cell">O's</td>
+            </tr>
+            <tr>
+              <td class="sc-cell"></td><td class="sc-cell"></td>
+            </tr>
+          </table>
+        </div>
       </div>
+      <!-- score tracker should go down here inside the div tags, div will be displayed on login, hidden on log out -->
     </body>
 </html>
 

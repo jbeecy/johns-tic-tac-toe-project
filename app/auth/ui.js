@@ -2,7 +2,7 @@
 // const store = require('./../store')
 
 const store = require('../store')
-
+// $('#game-screen').hide()
 // begin to enter the on success and on failure functions
 const onSignUpSuccess = (response) => {
   $('#message').text(`Thank you for signing up, ${response.user.email}, enjoy!`)
@@ -23,6 +23,7 @@ const onSignInSuccess = (response) => {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-out').show()
+  // $('#game-screen').show()
 }
 
 const onSignOutSuccess = () => {
@@ -30,6 +31,7 @@ const onSignOutSuccess = () => {
   $('#sign-in').show()
   $('#sign-up').show()
   $('#sign-out').hide()
+  // $('#game-screen').hide()
 }
 
 // module export

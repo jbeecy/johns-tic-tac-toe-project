@@ -3,13 +3,13 @@
 // need to add style to increase the size of the game board table, this is a UX need.
 // need to create visible boarders on the table between the <td> tags, also UX need
 
-td {
+.game-box {
   width: 150px;
   height: 150px;
   text-align: center;
 }
 
-table {
+#game-board {
   background-color: rgb(207, 207, 206);
   margin: 0 auto;
   border: 2.5px;
@@ -17,31 +17,53 @@ table {
   border-color: black;
 }
 
-.top {
+#score-board {
+  background-color: rgb(93, 93, 248);
+  margin: 0 auto;
+  border: 2.5px;
+  border-style: solid;
+  border-color: black;
+  text-align: center;
+}
+
+.sc-cell {
+  border-bottom: 2.5px solid black;
+  border-left: 2.5px solid black;
+  border-right: 2.5px solid black;
+  border-top: 2.5px solid black;
+  width: 50px;
+  height: 50px;
+}
+
+#box-1 {
   border-left: 2.5px solid black;
   border-right: 2.5px solid black;
   border-bottom: 2.5px solid black;
 }
 
-.left {
+#box-3 {
   border-top: 2.5px solid black;
   border-bottom: 2.5px solid black;
   border-right: 2.5px solid black;
 }
 
-.right {
+#box-5 {
   border-top: 2.5px solid black;
   border-bottom: 2.5px solid black;
   border-left: 2.5px solid black;
 }
 
-.bottom {
+#box-7 {
   border-left: 2.5px solid black;
   border-right: 2.5px solid black;
   border-top: 2.5px solid black;
 }
 
 h1 {
+  text-align: center;
+}
+
+h4 {
   text-align: center;
 }
 

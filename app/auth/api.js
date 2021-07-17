@@ -31,9 +31,16 @@ const signOut = function () {
   })
 }
 
+const box0 = function () {
+
+}
+
+// going to need to create API calls for game values as well per the events file
+
 // module export the correct functions
 module.exports = {
   signUp,
   signIn,
-  signOut
+  signOut,
+  box0
 }
