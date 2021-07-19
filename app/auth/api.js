@@ -62,6 +62,46 @@ const firstMove = function (gameId, data) {
   })
 }
 
+const secondMove = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
+// const box0 = function (gameId, data) {
+//   console.log(store.gameId)
+//   return $.ajax({
+//     url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Bearer ' + store.userToken
+//     },
+//     data: {
+//       game: {
+//         cell: {
+//           index: 0,
+//           value: 'x'
+//         },
+//         over: false
+//       }
+//     }
+//   })
+// }
+
 // going to need to create API calls for game values as well per the events file
 
 // module export the correct functions
@@ -70,5 +110,7 @@ module.exports = {
   signIn,
   signOut,
   newGame,
-  firstMove
+  firstMove,
+  secondMove
+  // box0
 }

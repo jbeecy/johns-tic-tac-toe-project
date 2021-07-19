@@ -42,9 +42,17 @@ const onNewGameSuccess = (response) => {
   console.log('success')
 }
 
+// const onBox0Success = () => {
+//   $('#box-0').text('X')
+// }
+
 const onFirstMoveSuccess = () => {
   console.log('First move successful')
-  $('.data-cell-index').text('X')
+  // $('.game-box').text('X')
+}
+
+const onSecondMoveSuccess = () => {
+  console.log('Second move successful.')
 }
 
 // module export
@@ -55,5 +63,7 @@ module.exports = {
   onSignInSuccess,
   onSignOutSuccess,
   onNewGameSuccess,
-  onFirstMoveSuccess
+  onFirstMoveSuccess,
+  onSecondMoveSuccess
+  // onBox0Success
 }

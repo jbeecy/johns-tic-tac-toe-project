@@ -2,6 +2,7 @@
 const getFormFields = require('./../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('./../store')
 
 // start writing events code per the event listeners on app.js
 // prevent the page from reloading
@@ -39,10 +40,29 @@ const onNewGame = function (event) {
     .catch(ui.onFailure)
 }
 
+// const onBox0 = function (event) {
+//   event.preventDefault()
+//   api.box0()
+//     .then(ui.onBox0Success)
+//     .catch(ui.onFailure)
+// }
+
 const onFirstMove = function (event) {
   event.preventDefault()
+  store.firstIndex = event.target.getAttribute('data-cell-index')
+  $(event.target).text('X')
   api.firstMove()
     .then(ui.onFirstMoveSuccess)
+    .catch(ui.onFailure)
+  // console.log(event.target.getAttribute('data-cell-index'))
+}
+
+const onSecondMove = function (event) {
+  event.preventDefault()
+  store.secondIndex = event.target.getAttribute('data-cell-index')
+  $(event.target).text('O')
+  api.secondMove()
+    .then(ui.onSecondMoveSuccess)
     .catch(ui.onFailure)
 }
 
@@ -54,5 +74,7 @@ module.exports = {
   onSignIn,
   onSignOut,
   onNewGame,
-  onFirstMove
+  onFirstMove,
+  onSecondMove
+  // onBox0
 }
