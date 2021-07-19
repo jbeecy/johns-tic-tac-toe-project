@@ -10,7 +10,7 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#new-game').on('click', authEvents.onNewGame)
-  $('.game-box').on('click', authEvents.onFirstMove)
+  $('.data-cell-index').on('click', authEvents.onFirstMove)
 })
 
 // after writing forms on html create event listeners for sign up, in, out

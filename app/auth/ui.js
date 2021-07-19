@@ -43,7 +43,7 @@ const onNewGameSuccess = (response) => {
 }
 
 const onFirstMoveSuccess = () => {
-  console.log('first move successful')
+  console.log('First move successful')
   $('.data-cell-index').text('X')
 }
 
