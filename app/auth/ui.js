@@ -23,7 +23,7 @@ const onSignInSuccess = (response) => {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-out').show()
-  // $('#game-screen').show()
+  $('#game-screen').show()
 }
 
 const onSignOutSuccess = () => {
@@ -31,7 +31,20 @@ const onSignOutSuccess = () => {
   $('#sign-in').show()
   $('#sign-up').show()
   $('#sign-out').hide()
-  // $('#game-screen').hide()
+  $('#game-screen').hide()
+}
+
+const onNewGameSuccess = (response) => {
+  $('#message').text('Lets Play!')
+  store.gameId = response.game._id
+  console.log(response.game._id)
+  $('#game-screen').show()
+  console.log('success')
+}
+
+const onFirstMoveSuccess = () => {
+  console.log('first move successful')
+  $('.data-cell-index').text('X')
 }
 
 // module export
@@ -40,5 +53,7 @@ module.exports = {
   onSignUpSuccess,
   onFailure,
   onSignInSuccess,
-  onSignOutSuccess
+  onSignOutSuccess,
+  onNewGameSuccess,
+  onFirstMoveSuccess
 }

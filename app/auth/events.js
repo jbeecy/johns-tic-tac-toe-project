@@ -32,11 +32,18 @@ const onSignOut = function () {
     .catch(ui.onFailure)
 }
 
-const onMove0 = function (event) {
+const onNewGame = function (event) {
   event.preventDefault()
-  api.box0()
-    .then(ui.gameSuccess)
-    .catch(ui.gameFailure)
+  api.newGame()
+    .then(ui.onNewGameSuccess)
+    .catch(ui.onFailure)
+}
+
+const onFirstMove = function (event) {
+  event.preventDefault()
+  api.firstMove()
+    .then(ui.onFirstMoveSuccess)
+    .catch(ui.onFailure)
 }
 
 // going to need to repeat event functions for user input of the game
@@ -46,5 +53,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onMove0
+  onNewGame,
+  onFirstMove
 }
