@@ -82,6 +82,146 @@ const box1 = function (gameId, data) {
   })
 }
 
+const box2 = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
+const box3 = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
+const box4 = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
+const box5 = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
+const box6 = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
+const box7 = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
+const box8 = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
 // going to need to create API calls for game values as well per the events file
 
 // module export the correct functions
@@ -91,5 +231,12 @@ module.exports = {
   signOut,
   newGame,
   box0,
-  box1
+  box1,
+  box2,
+  box3,
+  box4,
+  box5,
+  box6,
+  box7,
+  box8
 }

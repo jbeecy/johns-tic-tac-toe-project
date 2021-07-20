@@ -59,10 +59,47 @@ const onNewGameSuccess = (response) => {
 
 const onBox0Success = () => {
   // evaluate turn calculator and log applicable variable
+  console.log('box 0 successful')
 }
 
 const onBox1Success = () => {
   // evaluate turnCalc and log applicable variable
+  console.log('box 1 successful')
+}
+
+const onBox2Success = () => {
+  // evaluate turn calculator and log applicable variable
+  console.log('box 2 successful')
+}
+
+const onBox3Success = () => {
+  // evaluate turnCalc and log applicable variable
+  console.log('box 3 successful')
+}
+
+const onBox4Success = () => {
+  // evaluate turn calculator and log applicable variable
+  console.log('box 4 successful')
+}
+
+const onBox5Success = () => {
+  // evaluate turnCalc and log applicable variable
+  console.log('box 5 successful')
+}
+
+const onBox6Success = () => {
+  // evaluate turn calculator and log applicable variable
+  (console.log('box 6 successful'))
+}
+
+const onBox7Success = () => {
+  // evaluate turnCalc and log applicable variable
+  console.log('box 7 successful')
+}
+
+const onBox8Success = () => {
+  // evaluate turn counter and log appropriate variable
+  console.log('box 8 successful')
 }
 
 // module export
@@ -74,5 +111,12 @@ module.exports = {
   onSignOutSuccess,
   onNewGameSuccess,
   onBox0Success,
-  onBox1Success
+  onBox1Success,
+  onBox2Success,
+  onBox3Success,
+  onBox4Success,
+  onBox5Success,
+  onBox6Success,
+  onBox7Success,
+  onBox8Success
 }

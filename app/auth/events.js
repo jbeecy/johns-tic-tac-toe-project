@@ -54,6 +54,55 @@ const onBox1 = function (event) {
     .catch(ui.onFailure)
 }
 
+const onBox2 = function (event) {
+  event.preventDefault()
+  api.box2()
+    .then(ui.onBox2Success)
+    .catch(ui.onFailure)
+}
+
+const onBox3 = function (event) {
+  event.preventDefault()
+  api.box3()
+    .then(ui.onBox3Success)
+    .catch(ui.onFailure)
+}
+
+const onBox4 = function (event) {
+  event.preventDefault()
+  api.box4()
+    .then(ui.onBox4Success)
+    .catch(ui.onFailure)
+}
+
+const onBox5 = function (event) {
+  event.preventDefault()
+  api.box5()
+    .then(ui.onBox5Success)
+    .catch(ui.onFailure)
+}
+
+const onBox6 = function (event) {
+  event.preventDefault()
+  api.box6()
+    .then(ui.onBox6Success)
+    .catch(ui.onFailure)
+}
+
+const onBox7 = function (event) {
+  event.preventDefault()
+  api.box7()
+    .then(ui.onBox7Success)
+    .catch(ui.onFailure)
+}
+
+const onBox8 = function (event) {
+  event.preventDefault()
+  api.box8()
+    .then(ui.onBox8Success)
+    .catch(ui.onFailure)
+}
+
 // going to need to repeat event functions for user input of the game
 
 // module export the functions
@@ -63,5 +112,12 @@ module.exports = {
   onSignOut,
   onNewGame,
   onBox0,
-  onBox1
+  onBox1,
+  onBox2,
+  onBox3,
+  onBox4,
+  onBox5,
+  onBox6,
+  onBox7,
+  onBox8
 }
