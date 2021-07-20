@@ -33,10 +33,48 @@ const onSignOut = function () {
     .catch(ui.onFailure)
 }
 
+const checkForWin = function () {
+  if (($('#box-0').text() === 'X') && ($('#box-1').text() === 'X') && ($('#box-2').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-0').text() === 'O') && ($('#box-1').text() === 'O') && ($('#box-2').text() === 'O')) {
+    store.gameOver = true
+  } else if (($('#box-3').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-5').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-3').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-5').text() === 'O')) {
+    store.gameOver = true
+  } else if (($('#box-6').text() === 'X') && ($('#box-7').text() === 'X') && ($('#box-8').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-6').text() === 'O') && ($('#box-7').text() === 'O') && ($('#box-8').text() === 'O')) {
+    store.gameOver = true
+  } else if (($('#box-0').text() === 'X') && ($('#box-3').text() === 'X') && ($('#box-6').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-0').text() === 'O') && ($('#box-3').text() === 'O') && ($('#box-6').text() === 'O')) {
+    store.gameOver = true
+  } else if (($('#box-1').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-7').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-1').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-7').text() === 'O')) {
+    store.gameOver = true
+  } else if (($('#box-2').text() === 'X') && ($('#box-5').text() === 'X') && ($('#box-8').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-2').text() === 'O') && ($('#box-5').text() === 'O') && ($('#box-8').text() === 'O')) {
+    store.gameOver = true
+  } else if (($('#box-0').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-8').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-0').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-8').text() === 'O')) {
+    store.gameOver = true
+  } else if (($('#box-2').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-6').text() === 'X')) {
+    store.gameOver = true
+  } else if (($('#box-2').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-6').text() === 'O')) {
+    store.gameOver = true
+  } else {
+    store.gameOver = false
+  }
+}
+
 const onNewGame = function (event) {
   event.preventDefault()
   store.currentPlayer = 'O'
-  store.gameOver = false
+  // store.gameOver = false
   console.log(store.currentPlayer)
   api.newGame()
     .then(ui.onNewGameSuccess)
@@ -56,7 +94,9 @@ const onBox0 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-0').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -72,7 +112,9 @@ const onBox1 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-1').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -88,7 +130,9 @@ const onBox2 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-2').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -104,7 +148,9 @@ const onBox3 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-3').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -120,7 +166,9 @@ const onBox4 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-4').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -136,7 +184,9 @@ const onBox5 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-5').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -152,7 +202,9 @@ const onBox6 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-6').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -168,7 +220,9 @@ const onBox7 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-7').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 
@@ -184,7 +238,9 @@ const onBox8 = function (event) {
       store.currentPlayer = 'X'
     }
     $('#box-8').text(store.currentPlayer)
+    checkForWin()
   } else ($('#message').text('Oops! Pick an empty space.'))
+  checkForWin()
   console.log(store.gameOver)
 }
 

@@ -44,48 +44,39 @@ const onNewGameSuccess = (response) => {
 }
 
 const onBox0Success = () => {
-  // need to log the value of current player
-  console.log('box 0 successful')
+  $('#message').text('Nice move!')
 }
 
 const onBox1Success = () => {
-  // need to log the value of current player
-  console.log('box 1 successful')
+  $('#message').text('Nice move!')
 }
 
 const onBox2Success = () => {
-  // need to log the value of current player
-  console.log('box 2 successful')
+  $('#message').text('Nice move!')
 }
 
 const onBox3Success = () => {
-  // need to log the value of current player
-  console.log('box 3 successful')
+  $('#message').text('Nice move!')
 }
 
 const onBox4Success = () => {
-  // need to log the value of current player
-  console.log('box 4 successful')
+  $('#message').text('Nice move!')
 }
 
 const onBox5Success = () => {
-  // need to log the value of current player
-  console.log('box 5 successful')
+  $('#message').text('Nice move!')
 }
 
 const onBox6Success = () => {
-  // need to log the value of current player
-  (console.log('box 6 successful'))
+  $('#message').text('Nice move!')
 }
 
 const onBox7Success = () => {
-  // need to log the value of current player
-  console.log('box 7 successful')
+  $('#message').text('Nice move!')
 }
 
 const onBox8Success = () => {
-  // need to log the value of current player
-  console.log('box 8 successful')
+  $('#message').text('Nice move!')
 }
 
 // module export
