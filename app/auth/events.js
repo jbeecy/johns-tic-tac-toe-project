@@ -2,7 +2,7 @@
 const getFormFields = require('./../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-// const store = require('./../store')
+const store = require('./../store')
 
 // start writing events code per the event listeners on app.js
 // prevent the page from reloading
@@ -35,6 +35,8 @@ const onSignOut = function () {
 
 const onNewGame = function (event) {
   event.preventDefault()
+  store.currentPlayer = 'X'
+  console.log(store.currentPlayer)
   api.newGame()
     .then(ui.onNewGameSuccess)
     .catch(ui.onFailure)
@@ -45,6 +47,13 @@ const onBox0 = function (event) {
   api.box0()
     .then(ui.onBox0Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-0').text(store.currentPlayer)
 }
 
 const onBox1 = function (event) {
@@ -52,6 +61,13 @@ const onBox1 = function (event) {
   api.box1()
     .then(ui.onBox1Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-1').text(store.currentPlayer)
 }
 
 const onBox2 = function (event) {
@@ -59,6 +75,13 @@ const onBox2 = function (event) {
   api.box2()
     .then(ui.onBox2Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-2').text(store.currentPlayer)
 }
 
 const onBox3 = function (event) {
@@ -66,6 +89,13 @@ const onBox3 = function (event) {
   api.box3()
     .then(ui.onBox3Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-3').text(store.currentPlayer)
 }
 
 const onBox4 = function (event) {
@@ -73,6 +103,13 @@ const onBox4 = function (event) {
   api.box4()
     .then(ui.onBox4Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-4').text(store.currentPlayer)
 }
 
 const onBox5 = function (event) {
@@ -80,6 +117,13 @@ const onBox5 = function (event) {
   api.box5()
     .then(ui.onBox5Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-5').text(store.currentPlayer)
 }
 
 const onBox6 = function (event) {
@@ -87,6 +131,13 @@ const onBox6 = function (event) {
   api.box6()
     .then(ui.onBox6Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-6').text(store.currentPlayer)
 }
 
 const onBox7 = function (event) {
@@ -94,6 +145,13 @@ const onBox7 = function (event) {
   api.box7()
     .then(ui.onBox7Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-7').text(store.currentPlayer)
 }
 
 const onBox8 = function (event) {
@@ -101,6 +159,13 @@ const onBox8 = function (event) {
   api.box8()
     .then(ui.onBox8Success)
     .catch(ui.onFailure)
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
+  } else {
+    store.currentPlayer = 'X'
+  }
+  console.log(store.currentPlayer)
+  $('#box-8').text(store.currentPlayer)
 }
 
 // going to need to repeat event functions for user input of the game
