@@ -4,6 +4,21 @@
 const store = require('../store')
 // $('#game-screen').hide()
 // begin to enter the on success and on failure functions
+
+// for (let i = 1; i < 10; i++)
+// let turnCalc = i
+// if user clicks inside game box, log x or o and add 1 to turn calc
+// const getTurnId(turnCalc) = {
+//   let x = turnCalc % 2,
+//     if (x === 0) {
+//       return 'X'
+//     } else if (x == 1) {
+//       return 'O'
+//     } else {
+//       throw new Error("ERROR, click on an empty box.")
+//   }
+// }
+
 const onSignUpSuccess = (response) => {
   $('#message').text(`Thank you for signing up, ${response.user.email}, enjoy!`)
   console.log(response)
@@ -42,17 +57,12 @@ const onNewGameSuccess = (response) => {
   console.log('success')
 }
 
-// const onBox0Success = () => {
-//   $('#box-0').text('X')
-// }
-
-const onFirstMoveSuccess = () => {
-  console.log('First move successful')
-  // $('.game-box').text('X')
+const onBox0Success = () => {
+  // evaluate turn calculator and log applicable variable
 }
 
-const onSecondMoveSuccess = () => {
-  console.log('Second move successful.')
+const onBox1Success = () => {
+  // evaluate turnCalc and log applicable variable
 }
 
 // module export
@@ -63,7 +73,6 @@ module.exports = {
   onSignInSuccess,
   onSignOutSuccess,
   onNewGameSuccess,
-  onFirstMoveSuccess,
-  onSecondMoveSuccess
-  // onBox0Success
+  onBox0Success,
+  onBox1Success
 }
