@@ -1,6 +1,6 @@
 // require store.js
 const store = require('../store')
-// $('#game-screen').hide()
+$('#game-screen').hide()
 // begin to enter the on success and on failure functions
 
 // if user clicks inside game box, log x or o and add 1 to turn calc

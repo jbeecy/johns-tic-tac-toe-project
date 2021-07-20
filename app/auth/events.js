@@ -35,137 +35,157 @@ const onSignOut = function () {
 
 const onNewGame = function (event) {
   event.preventDefault()
-  store.currentPlayer = 'X'
+  store.currentPlayer = 'O'
+  store.gameOver = false
   console.log(store.currentPlayer)
   api.newGame()
     .then(ui.onNewGameSuccess)
     .catch(ui.onFailure)
+  $('.game-box').text('')
 }
 
 const onBox0 = function (event) {
   event.preventDefault()
-  api.box0()
-    .then(ui.onBox0Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-0').text(store.currentPlayer)
+  if ($('#box-0').text() === '') {
+    api.box0()
+      .then(ui.onBox0Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-0').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox1 = function (event) {
   event.preventDefault()
-  api.box1()
-    .then(ui.onBox1Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-1').text(store.currentPlayer)
+  if ($('#box-1').text() === '') {
+    api.box1()
+      .then(ui.onBox1Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-1').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox2 = function (event) {
   event.preventDefault()
-  api.box2()
-    .then(ui.onBox2Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-2').text(store.currentPlayer)
+  if ($('#box-2').text() === '') {
+    api.box2()
+      .then(ui.onBox2Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-2').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox3 = function (event) {
   event.preventDefault()
-  api.box3()
-    .then(ui.onBox3Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-3').text(store.currentPlayer)
+  if ($('#box-3').text() === '') {
+    api.box3()
+      .then(ui.onBox3Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-3').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox4 = function (event) {
   event.preventDefault()
-  api.box4()
-    .then(ui.onBox4Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-4').text(store.currentPlayer)
+  if ($('#box-4').text() === '') {
+    api.box4()
+      .then(ui.onBox4Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-4').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox5 = function (event) {
   event.preventDefault()
-  api.box5()
-    .then(ui.onBox5Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-5').text(store.currentPlayer)
+  if ($('#box-5').text() === '') {
+    api.box5()
+      .then(ui.onBox5Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-5').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox6 = function (event) {
   event.preventDefault()
-  api.box6()
-    .then(ui.onBox6Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-6').text(store.currentPlayer)
+  if ($('#box-6').text() === '') {
+    api.box6()
+      .then(ui.onBox6Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-6').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox7 = function (event) {
   event.preventDefault()
-  api.box7()
-    .then(ui.onBox7Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-7').text(store.currentPlayer)
+  if ($('#box-7').text() === '') {
+    api.box7()
+      .then(ui.onBox7Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-7').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 const onBox8 = function (event) {
   event.preventDefault()
-  api.box8()
-    .then(ui.onBox8Success)
-    .catch(ui.onFailure)
-  if (store.currentPlayer === 'X') {
-    store.currentPlayer = 'O'
-  } else {
-    store.currentPlayer = 'X'
-  }
-  console.log(store.currentPlayer)
-  $('#box-8').text(store.currentPlayer)
+  if ($('#box-8').text() === '') {
+    api.box8()
+      .then(ui.onBox8Success)
+      .catch(ui.onFailure)
+    if (store.currentPlayer === 'X') {
+      store.currentPlayer = 'O'
+    } else {
+      store.currentPlayer = 'X'
+    }
+    $('#box-8').text(store.currentPlayer)
+  } else ($('#message').text('Oops! Pick an empty space.'))
+  console.log(store.gameOver)
 }
 
 // going to need to repeat event functions for user input of the game
