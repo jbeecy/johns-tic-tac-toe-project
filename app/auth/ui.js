@@ -7,10 +7,9 @@ $('#sign-out').hide()
 // if user clicks inside game box, log x or o and add 1 to turn calc
 
 const onSignUpSuccess = (response) => {
-  $('#message').text(`Thank you for signing up, ${response.user.email}, enjoy!`)
+  $('#auth-message').text(`Thank you for signing up, ${response.user.email}, enjoy!`)
   console.log(response)
   $('#sign-up').trigger('reset')
-  $('#auth-message').hide()
 }
 
 const onSignUpFailure = (error) => {
@@ -37,7 +36,7 @@ const onSignInSuccess = (response) => {
   $('#sign-up').hide()
   $('#sign-out').show()
   $('#game-screen').show()
-  $('#auth-message').hide()
+  $('#auth-message').text('')
 }
 
 const onSignOutSuccess = () => {
