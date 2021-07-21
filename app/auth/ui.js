@@ -1,6 +1,7 @@
 // require store.js
 const store = require('../store')
 $('#game-screen').hide()
+$('#sign-out').hide()
 // begin to enter the on success and on failure functions
 
 // if user clicks inside game box, log x or o and add 1 to turn calc
@@ -41,6 +42,7 @@ const onNewGameSuccess = (response) => {
   console.log(response.game._id)
   $('#game-screen').show()
   console.log('success')
+  $('#sign-out').show()
 }
 
 const onBox0Success = () => {
