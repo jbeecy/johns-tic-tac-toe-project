@@ -31,6 +31,7 @@ const onSignOut = function () {
   api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onFailure)
+  $('.game-box').text('')
 }
 
 const checkForWin = function () {
@@ -82,6 +83,9 @@ const checkForWin = function () {
   } else if (($('#box-2').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-6').text() === 'O')) {
     store.gameOver = true
     $('#message-1').text('O has won, click new game to go again.')
+  } else if ((($('#box-1').text() !== '') && ($('#box-1').text() !== '') && ($('#box-2').text() !== '') && ($('#box-3').text() !== '') && ($('#box-4').text() !== '') && ($('#box-5').text() !== '') && ($('#box-6').text() !== '') && ($('#box-7').text() !== '') && ($('#box-8').text() !== ''))) {
+    store.gameOver = false
+    $('#message-1').text('The result is a tie, try again by clicking new game.')
   } else {
     store.gameOver = false
   }
@@ -96,6 +100,7 @@ const onNewGame = function (event) {
     .then(ui.onNewGameSuccess)
     .catch(ui.onFailure)
   $('.game-box').text('')
+  $('#message-1').text('')
 }
 
 const onBox0 = function (event) {
