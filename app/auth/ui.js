@@ -10,6 +10,17 @@ const onSignUpSuccess = (response) => {
   $('#message').text(`Thank you for signing up, ${response.user.email}, enjoy!`)
   console.log(response)
   $('#sign-up').trigger('reset')
+  $('#auth-message').hide()
+}
+
+const onSignUpFailure = (error) => {
+  $('#auth-message').text(`Sign up failed. make sure your email is formatted correctly and that your passwords match. Error Status: ${error.status}`)
+  $('#sign-up').trigger('reset')
+}
+
+const onSignInFailure = (error) => {
+  $('#auth-message').text(`Sign in failed, please create an account and make sure your credentials are correct. Error status: ${error.status}`)
+  $('#sign-in').trigger('reset')
 }
 
 const onFailure = (error) => {
@@ -26,6 +37,7 @@ const onSignInSuccess = (response) => {
   $('#sign-up').hide()
   $('#sign-out').show()
   $('#game-screen').show()
+  $('#auth-message').hide()
 }
 
 const onSignOutSuccess = () => {
@@ -97,5 +109,7 @@ module.exports = {
   onBox5Success,
   onBox6Success,
   onBox7Success,
-  onBox8Success
+  onBox8Success,
+  onSignInFailure,
+  onSignUpFailure
 }

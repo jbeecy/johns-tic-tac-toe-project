@@ -15,7 +15,7 @@ const onSignUp = function (event) {
   const data = getFormFields(form)
   api.signUp(data)
     .then(ui.onSignUpSuccess)
-    .catch(ui.onFailure)
+    .catch(ui.onSignUpFailure)
 }
 
 const onSignIn = function (event) {
@@ -24,7 +24,7 @@ const onSignIn = function (event) {
   const data = getFormFields(form)
   api.signIn(data)
     .then(ui.onSignInSuccess)
-    .catch(ui.onFailure)
+    .catch(ui.onSignInFailure)
 }
 
 const onSignOut = function () {
