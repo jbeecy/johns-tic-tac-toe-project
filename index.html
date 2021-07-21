@@ -38,7 +38,6 @@
       <br>
       <button id="sign-out" type="button">Sign Out</button>
 <!-- add messages for successful sign in and sign out and sign up -->
-      <p id="message"></p>
       <br>
 <!-- create a table for the game board, stash data values for table box index value -->
       <div id="game-screen">
@@ -46,6 +45,7 @@
         <!-- after ^ need event listeners and link user input data to table values -->
         <h3 class="game-intro">Let's play some Tic Tac Toe</h3>
         <p class="how-to ">I assume you know how to play. Click "New Game" to get started!</p>
+        <p id="message"></p>
         <p id="message-1"></p>
         <table id="game-board">
           <tr>
@@ -59,18 +59,7 @@
           </tr>
         </table>
         <button id="new-game">New Game</button>
-        <div id="game-info">
-          <table id="score-board">
-            <h4>Score</h4>
-            <tr>
-              <td class="sc-cell">X's</td><td class="sc-cell">O's</td>
-            </tr>
-            <tr>
-              <td id="x-score" class="sc-cell">0</td><td id="o-score" class="sc-cell">0</td>
-            </tr>
-          </table>
         </div>
-      </div>
       <!-- score tracker should go down here inside the div tags, div will be displayed on login, hidden on log out -->
     </body>
 </html>

@@ -17,24 +17,6 @@
   border-color: black;
 }
 
-#score-board {
-  background-color: rgb(93, 93, 248);
-  margin: 0 auto;
-  border: 2.5px;
-  border-style: solid;
-  border-color: black;
-  text-align: center;
-}
-
-.sc-cell {
-  border-bottom: 2.5px solid black;
-  border-left: 2.5px solid black;
-  border-right: 2.5px solid black;
-  border-top: 2.5px solid black;
-  width: 50px;
-  height: 50px;
-}
-
 #box-1 {
   border-left: 2.5px solid black;
   border-right: 2.5px solid black;
@@ -72,5 +54,9 @@ h4 {
 }
 
 .how-to {
+  text-align: center;
+}
+
+#message-1 {
   text-align: center;
 }
