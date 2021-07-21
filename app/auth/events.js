@@ -36,36 +36,52 @@ const onSignOut = function () {
 const checkForWin = function () {
   if (($('#box-0').text() === 'X') && ($('#box-1').text() === 'X') && ($('#box-2').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-0').text() === 'O') && ($('#box-1').text() === 'O') && ($('#box-2').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else if (($('#box-3').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-5').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-3').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-5').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else if (($('#box-6').text() === 'X') && ($('#box-7').text() === 'X') && ($('#box-8').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-6').text() === 'O') && ($('#box-7').text() === 'O') && ($('#box-8').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else if (($('#box-0').text() === 'X') && ($('#box-3').text() === 'X') && ($('#box-6').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-0').text() === 'O') && ($('#box-3').text() === 'O') && ($('#box-6').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else if (($('#box-1').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-7').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-1').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-7').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else if (($('#box-2').text() === 'X') && ($('#box-5').text() === 'X') && ($('#box-8').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-2').text() === 'O') && ($('#box-5').text() === 'O') && ($('#box-8').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else if (($('#box-0').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-8').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-0').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-8').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else if (($('#box-2').text() === 'X') && ($('#box-4').text() === 'X') && ($('#box-6').text() === 'X')) {
     store.gameOver = true
+    $('#message-1').text('X has won, click new game to go again.')
   } else if (($('#box-2').text() === 'O') && ($('#box-4').text() === 'O') && ($('#box-6').text() === 'O')) {
     store.gameOver = true
+    $('#message-1').text('O has won, click new game to go again.')
   } else {
     store.gameOver = false
   }
@@ -74,7 +90,7 @@ const checkForWin = function () {
 const onNewGame = function (event) {
   event.preventDefault()
   store.currentPlayer = 'O'
-  // store.gameOver = false
+  store.gameOver = false
   console.log(store.currentPlayer)
   api.newGame()
     .then(ui.onNewGameSuccess)
@@ -84,7 +100,7 @@ const onNewGame = function (event) {
 
 const onBox0 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-0').text() === '') {
       api.box0()
         .then(ui.onBox0Success)
@@ -104,7 +120,7 @@ const onBox0 = function (event) {
 
 const onBox1 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-1').text() === '') {
       api.box1()
         .then(ui.onBox1Success)
@@ -124,7 +140,7 @@ const onBox1 = function (event) {
 
 const onBox2 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-2').text() === '') {
       api.box2()
         .then(ui.onBox2Success)
@@ -144,7 +160,7 @@ const onBox2 = function (event) {
 
 const onBox3 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-3').text() === '') {
       api.box3()
         .then(ui.onBox3Success)
@@ -164,7 +180,7 @@ const onBox3 = function (event) {
 
 const onBox4 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-4').text() === '') {
       api.box4()
         .then(ui.onBox4Success)
@@ -184,7 +200,7 @@ const onBox4 = function (event) {
 
 const onBox5 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-5').text() === '') {
       api.box5()
         .then(ui.onBox5Success)
@@ -204,7 +220,7 @@ const onBox5 = function (event) {
 
 const onBox6 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-6').text() === '') {
       api.box6()
         .then(ui.onBox6Success)
@@ -224,7 +240,7 @@ const onBox6 = function (event) {
 
 const onBox7 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-7').text() === '') {
       api.box7()
         .then(ui.onBox7Success)
@@ -244,7 +260,7 @@ const onBox7 = function (event) {
 
 const onBox8 = function (event) {
   event.preventDefault()
-  if (checkForWin === false) {
+  if (store.gameOver === false) {
     if ($('#box-8').text() === '') {
       api.box8()
         .then(ui.onBox8Success)

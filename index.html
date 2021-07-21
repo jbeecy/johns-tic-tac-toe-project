@@ -46,6 +46,7 @@
         <!-- after ^ need event listeners and link user input data to table values -->
         <h3 class="game-intro">Let's play some Tic Tac Toe</h3>
         <p class="how-to ">I assume you know how to play. Click "New Game" to get started!</p>
+        <p id="message-1"></p>
         <table id="game-board">
           <tr>
             <td id="box-0" class="game-box" data-cell-index="0"></td><td id="box-1" class="game-box" data-cell-index="1"></td><td id="box-2" class="game-box" data-cell-index="2"></td>
@@ -65,7 +66,7 @@
               <td class="sc-cell">X's</td><td class="sc-cell">O's</td>
             </tr>
             <tr>
-              <td class="sc-cell">0</td><td class="sc-cell">0</td>
+              <td id="x-score" class="sc-cell">0</td><td id="o-score" class="sc-cell">0</td>
             </tr>
           </table>
         </div>
