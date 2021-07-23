@@ -62,6 +62,27 @@ const box0 = function (gameId, data) {
   })
 }
 
+// the index cant be hard-coded
+const box = function (gameId, data) {
+  console.log(store.gameId)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.userToken
+    },
+    data: {
+      game: {
+        cell: {
+          index: store.index,
+          value: 'x'
+        },
+        over: false
+      }
+    }
+  })
+}
+
 const box1 = function (gameId, data) {
   console.log(store.gameId)
   return $.ajax({
@@ -238,5 +259,6 @@ module.exports = {
   box5,
   box6,
   box7,
-  box8
+  box8,
+  box
 }
