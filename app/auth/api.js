@@ -75,7 +75,7 @@ const box = function (gameId, data) {
       game: {
         cell: {
           index: store.index,
-          value: 'x'
+          value: store.currentPlayer
         },
         over: false
       }
