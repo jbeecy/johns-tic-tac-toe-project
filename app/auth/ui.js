@@ -56,44 +56,8 @@ const onNewGameSuccess = (response) => {
   $('#sign-out').show()
 }
 
-const onBox0Success = () => {
-  $('#message').text('Nice move!')
-}
-
 // these are all the same, will be easy to switch over
 const onBoxSuccess = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox1Success = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox2Success = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox3Success = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox4Success = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox5Success = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox6Success = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox7Success = () => {
-  $('#message').text('Nice move!')
-}
-
-const onBox8Success = () => {
   $('#message').text('Nice move!')
 }
 
@@ -105,15 +69,6 @@ module.exports = {
   onSignInSuccess,
   onSignOutSuccess,
   onNewGameSuccess,
-  onBox0Success,
-  onBox1Success,
-  onBox2Success,
-  onBox3Success,
-  onBox4Success,
-  onBox5Success,
-  onBox6Success,
-  onBox7Success,
-  onBox8Success,
   onSignInFailure,
   onSignUpFailure,
   onBoxSuccess

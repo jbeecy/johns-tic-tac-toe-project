@@ -11,14 +11,6 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#new-game').on('click', authEvents.onNewGame)
   $('.game-box').on('click', authEvents.onBox)
-  // $('#box-1').on('click', authEvents.onBox1)
-  // $('#box-2').on('click', authEvents.onBox2)
-  // $('#box-3').on('click', authEvents.onBox3)
-  // $('#box-4').on('click', authEvents.onBox4)
-  // $('#box-5').on('click', authEvents.onBox5)
-  // $('#box-6').on('click', authEvents.onBox6)
-  // $('#box-7').on('click', authEvents.onBox7)
-  // $('#box-8').on('click', authEvents.onBox8)
 })
 
 // after writing forms on html create event listeners for sign up, in, out
