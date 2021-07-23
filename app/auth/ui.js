@@ -60,6 +60,11 @@ const onBox0Success = () => {
   $('#message').text('Nice move!')
 }
 
+// these are all the same, will be easy to switch over
+const onBoxSuccess = () => {
+  $('#message').text('Nice move!')
+}
+
 const onBox1Success = () => {
   $('#message').text('Nice move!')
 }
@@ -110,5 +115,6 @@ module.exports = {
   onBox7Success,
   onBox8Success,
   onSignInFailure,
-  onSignUpFailure
+  onSignUpFailure,
+  onBoxSuccess
 }

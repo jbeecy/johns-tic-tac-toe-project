@@ -122,6 +122,30 @@ const onBox0 = function (event) {
     console.log(store.gameOver)
   }
 }
+// selecting #box-0
+  // calling api.box-0- solved
+  // ui.onboxsuccess- solved
+const onBox = function (event) {
+  event.preventDefault()
+  store.index = $(event.target).data('cell-index')
+  console.log(store.index)
+  if (store.gameOver === false) {
+    if ($(event.target).text() === '') {
+      api.box()
+        .then(ui.onBoxSuccess)
+        .catch(ui.onFailure)
+      if (store.currentPlayer === 'X') {
+        store.currentPlayer = 'O'
+      } else {
+        store.currentPlayer = 'X'
+      }
+      $(event.target).text(store.currentPlayer)
+      checkForWin()
+    } else ($('#message').text('Oops! Pick an empty space.'))
+    checkForWin()
+    console.log(store.gameOver)
+  }
+}
 
 const onBox1 = function (event) {
   event.preventDefault()
@@ -299,5 +323,6 @@ module.exports = {
   onBox5,
   onBox6,
   onBox7,
-  onBox8
+  onBox8,
+  onBox
 }
