@@ -36,7 +36,6 @@
         <input type="submit" value="Sign In">
       </form>
       <br>
-      <button id="sign-out" type="button">Sign Out</button>
       <p id="auth-message"></p>
 <!-- add messages for successful sign in and sign out and sign up -->
       <br>
@@ -59,7 +58,10 @@
             <td id="box-6" class="game-box" data-cell-index="6"></td><td id="box-7" class="game-box" data-cell-index="7"></td><td id="box-8" class="game-box" data-cell-index="8"></td>
           </tr>
         </table>
-        <button id="new-game">New Game</button>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button id="new-game">New Game</button>
+          <button id="sign-out" type="button">Sign Out</button>
+        </div>
         </div>
       <!-- score tracker should go down here inside the div tags, div will be displayed on login, hidden on log out -->
     </body>
