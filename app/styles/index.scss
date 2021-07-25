@@ -81,7 +81,7 @@ td {
 }
 
 td:hover {
-  background-color: rgba(255, 255, 0, 0.39)
+  background-color: rgba(0, 0, 0, 0.315)
 }
 
 button {
@@ -107,11 +107,11 @@ form {
 }
 
 body {
-  background: rgb(2, 97, 7);
+  background: rgb(6, 205, 240);
 }
 
 head {
-  background: rgb(2, 97, 7);
+  background: rgb(6, 205, 240);
 }
 
 label {
@@ -144,4 +144,8 @@ label {
 .btn-group {
   display: flex;
   justify-content: center;
+}
+
+input:hover {
+  background-color: rgba(0, 0, 0, 0.315)
 }
