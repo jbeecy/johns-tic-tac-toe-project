@@ -49,28 +49,59 @@
           </div>
         </div>
       </nav>
-      <br>
 <!-- Add forms for sign up, sign in, and button for sign out -->
-      <form id="sign-up" class="border">
-        <h3>Sign Up</h3>
-        <label>Email</label>
-        <input type="email" name="credentials[email]">
-        <label>Password</label>
-        <input type="password" name="credentials[password]">
-        <label>Password Confirmation</label>
-        <input type="password" name="credentials[password_confirmation]">
-        <input type="submit" value="Sign Up">
-      </form>
-      <br>
-
-      <form id="sign-in" class="border">
-        <h3>Sign In</h3>
-        <label>Email</label>
-        <input type="email" name="credentials[email]">
-        <label>Password</label>
-        <input type="password" name="credentials[password]">
-        <input type="submit" value="Sign In">
-      </form>
+<div class="sign-up" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Sign Up</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="sign-up" class="border">
+          <br>
+          <label>Email</label>
+            <input type="email" name="credentials[email]">
+            <br>
+            <br>
+          <label>Password</label>
+            <input type="password" name="credentials[password]">
+            <br>
+            <br>
+          <label>Password Confirmation</label>
+            <input type="password" name="credentials[password_confirmation]">
+            <br>
+            <br>
+          <input type="submit" value="Sign Up">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="sign-in" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Sign In</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="sign-in" class="border">
+                <br>
+                <label>Email</label>
+                  <input type="email" name="credentials[email]">
+                <br>
+                <br>
+                <label>Password</label>
+                  <input type="password" name="credentials[password]">
+                <br>
+                <br>
+                <input type="submit" value="Sign In">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <br>
       <p id="auth-message"></p>
 <!-- add messages for successful sign in and sign out and sign up -->

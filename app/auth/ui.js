@@ -10,6 +10,7 @@ const onSignUpSuccess = (response) => {
   $('#auth-message').text(`Thank you for signing up, ${response.user.email}, enjoy!`)
   console.log(response)
   $('#sign-up').trigger('reset')
+  $('.sign-up').hide()
 }
 
 const onSignUpFailure = (error) => {
@@ -32,8 +33,8 @@ const onSignInSuccess = (response) => {
   store.userToken = response.user.token
   console.log(response.user.token)
   $('#sign-in').trigger('reset')
-  $('#sign-in').hide()
-  $('#sign-up').hide()
+  $('.sign-in').hide()
+  $('.sign-up').hide()
   $('#sign-out').show()
   $('#game-screen').show()
   $('#auth-message').text('')
@@ -41,8 +42,8 @@ const onSignInSuccess = (response) => {
 
 const onSignOutSuccess = () => {
   $('#message').text('See you soon!')
-  $('#sign-in').show()
-  $('#sign-up').show()
+  $('.sign-in').show()
+  $('.sign-up').show()
   $('#sign-out').hide()
   $('#game-screen').hide()
 }
